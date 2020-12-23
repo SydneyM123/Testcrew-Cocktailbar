@@ -10,11 +10,16 @@ import java.util.ArrayList;
  */
 public class Menu
 {
-    private ArrayList<MenuItem> menuItems;
+    private final ArrayList<MenuItem> menuItems;
 
     public Menu(ArrayList<MenuItem> menuItems)
     {
         this.menuItems = menuItems;
+    }
+
+    public Menu()
+    {
+        this.menuItems = new ArrayList<>();
     }
 
     public ArrayList<MenuItem> getMenuItems()
@@ -22,8 +27,30 @@ public class Menu
         return menuItems;
     }
 
+    public MenuItem getByName(String name) throws MenuItemNotFound
+    {
+        MenuItem menuItem = null;
+
+        for (var item : menuItems)
+            if (item.getName().equals(name))
+                menuItem = item;
+
+        if (menuItem == null)
+            throw new MenuItemNotFound(name);
+
+        return menuItem;
+    }
+
     public void addMenuItem(MenuItem menuItem)
     {
         this.menuItems.add(menuItem);
+    }
+
+    public static class MenuItemNotFound extends Exception
+    {
+        public MenuItemNotFound(String name)
+        {
+            super("Menu item: " + name);
+        }
     }
 }

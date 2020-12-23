@@ -1,6 +1,7 @@
 package Cocktailbar;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Represents a cocktail-bar.
@@ -55,5 +56,31 @@ public class Bar
         for (var ingredient : menuCocktail.getIngredients())
             sb.append("- ").append(ingredient).append("\n");
         return sb;
+    }
+
+    public double paymentAmount(HashSet<Order> orders) throws Menu.MenuItemNotFound
+    {
+        var paymentAmount = 0d;
+        for (var order : orders)
+            paymentAmount += paymentAmount(order);
+        return paymentAmount;
+    }
+
+    public double paymentAmount(Order order) throws Menu.MenuItemNotFound
+    {
+        var paymentAmount = 0d;
+        for (var cocktailOrder : order.getCocktailOrders().entrySet())
+            paymentAmount += getPaymentAmount(cocktailOrder);
+        return paymentAmount;
+    }
+
+    private double getPaymentAmount(java.util.Map.Entry<CocktailOrder, Integer> cocktailOrder) throws Menu.MenuItemNotFound
+    {
+        var cocktailOrderAmount = 0d;
+        cocktailOrderAmount += menu.getByName(cocktailOrder.getKey().getGlass()).getPrice();
+        cocktailOrderAmount += menu.getByName(cocktailOrder.getKey().getCocktail()).getPrice();
+        for (var addon : cocktailOrder.getKey().getAddons())
+            cocktailOrderAmount += menu.getByName(addon).getPrice();
+        return cocktailOrderAmount * cocktailOrder.getValue();
     }
 }
