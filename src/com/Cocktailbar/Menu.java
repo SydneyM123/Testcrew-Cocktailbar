@@ -1,5 +1,7 @@
 package com.Cocktailbar;
 
+import com.Cocktailbar.Exceptions.MenuItemNotFound;
+
 import java.util.ArrayList;
 
 /**
@@ -44,13 +46,5 @@ public class Menu
     public void addMenuItem(MenuItem menuItem)
     {
         this.menuItems.add(menuItem);
-    }
-
-    public static class MenuItemNotFound extends Exception
-    {
-        public MenuItemNotFound(String name)
-        {
-            super("Menu item: " + name);
-        }
     }
 }
