@@ -1,5 +1,6 @@
-import com.Cocktailbar.Menu;
-import com.Cocktailbar.MenuItem;
+package com.Cocktailbar;
+
+import com.Cocktailbar.Exceptions.MenuItemNotFound;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MenuTests
 {
     @Test
-    public void canGetByName() throws Menu.MenuItemNotFound
+    public void canGetByName() throws MenuItemNotFound
     {
         var menuItem = new MenuItem("MenuItem", 0.00);
         var menu = new Menu();
@@ -20,6 +21,6 @@ public class MenuTests
     public void canThrowMenuItemNotFound()
     {
         var menu = new Menu();
-        assertThrows(Menu.MenuItemNotFound.class, () -> menu.getByName(""));
+        assertThrows(MenuItemNotFound.class, () -> menu.getByName(""));
     }
 }

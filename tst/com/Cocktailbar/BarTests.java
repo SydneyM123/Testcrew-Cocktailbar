@@ -1,4 +1,6 @@
-import com.Cocktailbar.*;
+package com.Cocktailbar;
+
+import com.Cocktailbar.Exceptions.MenuItemNotFound;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -34,7 +36,7 @@ public class BarTests
     }
 
     @Test
-    public void canGetCorrectPaymentAmountWithOneCocktailOrder() throws Menu.MenuItemNotFound
+    public void canGetCorrectPaymentAmountWithOneCocktailOrder() throws MenuItemNotFound
     {
         var order = new Order(new Customer("TestCustomer"));
         var cocktailOrder = new CocktailOrder("MenuCocktail", "MenuItem1");
@@ -47,7 +49,7 @@ public class BarTests
     }
 
     @Test
-    public void canGetCorrectPaymentAmountWithThreeCocktailOrders() throws Menu.MenuItemNotFound
+    public void canGetCorrectPaymentAmountWithThreeCocktailOrders() throws MenuItemNotFound
     {
         var order = new Order(new Customer(""));
         var cocktailOrder1 = new CocktailOrder("MenuCocktail", "MenuItem1");
@@ -62,7 +64,7 @@ public class BarTests
     }
 
     @Test
-    public void canGetCorrectPaymentAmountWithMoreOrders() throws Menu.MenuItemNotFound
+    public void canGetCorrectPaymentAmountWithMoreOrders() throws MenuItemNotFound
     {
         var order1 = new Order(new Customer(""));
         var order2 = new Order(new Customer(""));

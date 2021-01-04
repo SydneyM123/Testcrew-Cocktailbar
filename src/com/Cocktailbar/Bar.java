@@ -1,5 +1,7 @@
 package com.Cocktailbar;
 
+import com.Cocktailbar.Exceptions.MenuItemNotFound;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -58,7 +60,7 @@ public class Bar
         return sb;
     }
 
-    public double paymentAmount(HashSet<Order> orders) throws Menu.MenuItemNotFound
+    public double paymentAmount(HashSet<Order> orders) throws MenuItemNotFound
     {
         var paymentAmount = 0d;
         for (var order : orders)
@@ -66,7 +68,7 @@ public class Bar
         return paymentAmount;
     }
 
-    public double paymentAmount(Order order) throws Menu.MenuItemNotFound
+    public double paymentAmount(Order order) throws MenuItemNotFound
     {
         var paymentAmount = 0d;
         for (var cocktailOrder : order.getCocktailOrders().entrySet())
@@ -74,7 +76,7 @@ public class Bar
         return paymentAmount;
     }
 
-    private double getPaymentAmount(java.util.Map.Entry<CocktailOrder, Integer> cocktailOrder) throws Menu.MenuItemNotFound
+    private double getPaymentAmount(java.util.Map.Entry<CocktailOrder, Integer> cocktailOrder) throws MenuItemNotFound
     {
         var cocktailOrderAmount = 0d;
         cocktailOrderAmount += menu.getByName(cocktailOrder.getKey().getGlass()).getPrice();
