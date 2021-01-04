@@ -1,4 +1,4 @@
-package Cocktailbar;
+package com.Cocktailbar;
 
 /**
  * Represents an item on the menu

@@ -1,5 +1,5 @@
-import Cocktailbar.Menu;
-import Cocktailbar.MenuItem;
+import com.Cocktailbar.Menu;
+import com.Cocktailbar.MenuItem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

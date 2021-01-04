@@ -1,4 +1,4 @@
-package Cocktailbar;
+package com.Cocktailbar;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.HashSet;
  */
 public class Bar
 {
-    private Menu menu;
+    private final Menu menu;
 
     public Bar(Menu menu)
     {
