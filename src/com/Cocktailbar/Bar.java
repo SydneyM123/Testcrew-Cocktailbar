@@ -1,28 +1,40 @@
 package com.Cocktailbar;
 
 import com.Cocktailbar.Exceptions.MenuItemNotFound;
+import com.Cocktailbar.Exceptions.OutOfStock;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
  * Represents a cocktail-bar.
  *
- * @author 4753046
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
  * @version 0.1
  */
 public class Bar
 {
     private final Menu menu;
+    private final Storage storage;
 
-    public Bar(Menu menu)
+    public Bar(Menu menu, Storage storage)
     {
+        this.storage = storage;
         this.menu = menu;
+    }
+
+    public Bar(Storage storage)
+    {
+        this.storage = storage;
+        this.menu = new Menu(new ArrayList<>());
     }
 
     public Bar()
     {
         this.menu = new Menu(new ArrayList<>());
+        this.storage = new Storage();
     }
 
     public Menu getMenu()
@@ -51,13 +63,11 @@ public class Bar
         return sb;
     }
 
-    private StringBuilder appendMenuCocktail(StringBuilder sb, MenuCocktail menuItem)
+    private void appendMenuCocktail(StringBuilder sb, MenuCocktail menuItem)
     {
-        var menuCocktail = menuItem;
         sb.append("Ingrediënten:").append("\n");
-        for (var ingredient : menuCocktail.getIngredients())
+        for (var ingredient : menuItem.getIngredients())
             sb.append("- ").append(ingredient).append("\n");
-        return sb;
     }
 
     public double paymentAmount(HashSet<Order> orders) throws MenuItemNotFound
@@ -84,5 +94,49 @@ public class Bar
         for (var addon : cocktailOrder.getKey().getAddons())
             cocktailOrderAmount += menu.getByName(addon).getPrice();
         return cocktailOrderAmount * cocktailOrder.getValue();
+    }
+
+    public HashMap<Cocktail, Integer> order(HashSet<Order> orders) throws OutOfStock, MenuItemNotFound
+    {
+        var cocktails = new HashMap<Cocktail, Integer>();
+
+        for (var order : orders)
+        {
+            for (var entry : order.getCocktailOrders().entrySet())
+            {
+                var cocktailOrder = entry.getKey();
+
+                MenuCocktail menuCocktail;
+                try
+                {
+                    menuCocktail = (MenuCocktail) menu.getByName(cocktailOrder.getCocktail());
+                }
+                catch (Exception e)
+                {
+                    throw new MenuItemNotFound(cocktailOrder.getCocktail());
+                }
+
+                if (!storage.getGlass(cocktailOrder.getGlass(), 1))
+                    throw new OutOfStock(cocktailOrder.getGlass());
+
+                var cocktail = new Cocktail(menuCocktail.getName(), cocktailOrder.getGlass());
+
+                for (var ingredient : menuCocktail.getIngredients())
+                    if (storage.getIngredient(ingredient, 1))
+                        cocktail.addIngredient(ingredient);
+                    else
+                        throw new OutOfStock(ingredient);
+
+                for (var addon : cocktailOrder.getAddons())
+                    if (storage.getAddon(addon, 1))
+                        cocktail.addAddon(addon);
+                    else
+                        throw new OutOfStock(addon);
+
+                cocktails.put(cocktail, entry.getValue());
+            }
+        }
+
+        return cocktails;
     }
 }

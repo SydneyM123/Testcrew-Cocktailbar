@@ -5,12 +5,13 @@ import java.util.ArrayList;
 /**
  * Represents a cocktail on the menu.
  *
- * @author 4753046
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
  * @version 0.1
  */
 public class MenuCocktail extends MenuItem
 {
-    private ArrayList<String> ingredients;
+    private final ArrayList<String> ingredients;
 
     public MenuCocktail(String name, double price)
     {
