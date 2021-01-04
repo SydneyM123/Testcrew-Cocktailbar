@@ -128,4 +128,36 @@ public class Storage
         return 0;
     }
 
+    public boolean getGlass(String glass, int amount)
+    {
+        if(checkStockGlass(glass) >= amount)
+        {
+            this.glasses.replace(glass, this.glasses.get(glass) - amount);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean getIngredient(String ingredient, int amount)
+    {
+        if(checkStockGlass(ingredient) >= amount)
+        {
+            this.ingredients.replace(ingredient, this.ingredients.get(ingredient) - amount);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean getAddon(String addon, int amount)
+    {
+        if(checkStockGlass(addon) >= amount)
+        {
+            this.addons.replace(addon, this.addons.get(addon) - amount);
+            return true;
+        }
+
+        return false;
+    }
 }
