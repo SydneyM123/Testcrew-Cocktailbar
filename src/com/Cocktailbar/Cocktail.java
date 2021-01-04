@@ -2,12 +2,18 @@ package com.Cocktailbar;
 
 import java.util.HashSet;
 
+/**
+ * Represents a cocktail.
+ *
+ * @author 4753046
+ * @version 0.1
+ */
 public class Cocktail
 {
     private String name;
     private String glass;
-    private HashSet<String> addons;
-    private HashSet<String> ingredients;
+    private final HashSet<String> addons;
+    private final HashSet<String> ingredients;
 
     public Cocktail(String name, String glass)
     {
