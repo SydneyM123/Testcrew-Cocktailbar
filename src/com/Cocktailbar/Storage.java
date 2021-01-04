@@ -13,9 +13,9 @@ import java.util.HashMap;
  */
 public class Storage
 {
-    HashMap<String, Integer> glasses;
-    HashMap<String, Integer> ingredients;
-    HashMap<String, Integer> addons;
+    private final HashMap<String, Integer> glasses;
+    private final HashMap<String, Integer> ingredients;
+    private final HashMap<String, Integer> addons;
 
     public Storage()
     {
