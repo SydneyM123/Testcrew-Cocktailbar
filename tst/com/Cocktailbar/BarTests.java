@@ -1,11 +1,13 @@
 package com.Cocktailbar;
 
 import com.Cocktailbar.Exceptions.MenuItemNotFound;
+import com.Cocktailbar.Exceptions.OutOfStock;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BarTests
 {
@@ -45,7 +47,7 @@ public class BarTests
 
         order.addCocktailOrder(cocktailOrder, 1);
 
-        assertEquals(1344.06, getBar().paymentAmount(order));
+        assertEquals(1344.06, getBar(new Storage(), new ArrayList<>()).paymentAmount(order));
     }
 
     @Test
@@ -60,7 +62,7 @@ public class BarTests
         order.addCocktailOrder(cocktailOrder1, 1);
         order.addCocktailOrder(cocktailOrder2, 2); //47.58
 
-        assertEquals(1391.64, getBar().paymentAmount(order), 0.01);
+        assertEquals(1391.64, getBar(new Storage(), new ArrayList<>()).paymentAmount(order), 0.01);
     }
 
     @Test
@@ -82,20 +84,207 @@ public class BarTests
         orders.add(order1);
         orders.add(order2);
 
-        assertEquals(1391.64, getBar().paymentAmount(orders), 0.01);
+        assertEquals(1391.64, getBar(new Storage(), new ArrayList<>()).paymentAmount(orders), 0.01);
+    }
+
+    @Test
+    public void canThrowMenuItemNotFound_whenCocktailDoesNotExist()
+    {
+        var bar = getBar(new Storage(), new ArrayList<>());
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+
+        order.addCocktailOrder(new CocktailOrder(), 1);
+        orders.add(order);
+
+        assertThrows(MenuItemNotFound.class, () -> bar.order(orders));
+    }
+
+    @Test
+    public void canThrowOutOfStock_whenGlassDoesNotExistInStorage()
+    {
+        var storage = new Storage();
+        var bar = getBar(storage, new ArrayList<>());
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+
+        order.addCocktailOrder(new CocktailOrder("", "MenuCocktail"), 1);
+        orders.add(order);
+
+        assertThrows(OutOfStock.class, () -> bar.order(orders));
+    }
+
+    @Test
+    public void canThrowOutOfStock_whenIngredientDoesNotExistInStorage()
+    {
+        var storage = new Storage();
+        var ingredients = new ArrayList<String>();
+        var bar = getBar(storage, ingredients);
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+        var cocktailOrder = new CocktailOrder();
+
+        ingredients.add("Banaan");
+        storage.addGlass("");
+        cocktailOrder.setCocktail("MenuCocktail");
+        order.addCocktailOrder(cocktailOrder, 1);
+        orders.add(order);
+
+        assertThrows(OutOfStock.class, () -> bar.order(orders));
+    }
+
+    @Test
+    public void canThrowOutOfStock_whenAddonDoesNotExistInStorage()
+    {
+        var storage = new Storage();
+        var ingredients = new ArrayList<String>();
+        var bar = getBar(storage, ingredients);
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+        var cocktailOrder = new CocktailOrder();
+
+        storage.addGlass("");
+        storage.addIngredient("Banaan");
+        cocktailOrder.addAddon("Ijsklontjes");
+        ingredients.add("Banaan");
+        cocktailOrder.setCocktail("MenuCocktail");
+        order.addCocktailOrder(cocktailOrder, 1);
+        orders.add(order);
+
+        assertThrows(OutOfStock.class, () -> bar.order(orders));
+    }
+
+    @Test
+    public void canOrderOneCocktail() throws OutOfStock, MenuItemNotFound
+    {
+        var storage = new Storage();
+        var ingredients = new ArrayList<String>();
+        var bar = getBar(storage, ingredients);
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+        var cocktailOrder = new CocktailOrder("Bierglas", "MenuCocktail");
+
+        storage.addGlass("Bierglas");
+        storage.addIngredient("Banaan");
+        storage.addAddon("Ijsklontjes");
+        cocktailOrder.addAddon("Ijsklontjes");
+        ingredients.add("Banaan");
+        order.addCocktailOrder(cocktailOrder, 1);
+        orders.add(order);
+
+        var result = bar.order(orders);
+
+        assertEquals(1, result.size());
+
+        for (var entry : result.entrySet())
+        {
+            var cocktail = entry.getKey();
+            assertEquals(1, entry.getValue());
+            assertEquals("Bierglas", cocktail.getGlass());
+            assertEquals("MenuCocktail", cocktail.getName());
+            assertTrue(cocktail.getAddons().contains("Ijsklontjes"));
+            assertTrue(cocktail.getIngredients().contains("Banaan"));
+        }
+    }
+
+    @Test
+    public void canOrderThreeOfTheSameCocktail() throws OutOfStock, MenuItemNotFound
+    {
+        var storage = new Storage();
+        var ingredients = new ArrayList<String>();
+        var bar = getBar(storage, ingredients);
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+        var cocktailOrder = new CocktailOrder("Bierglas", "MenuCocktail");
+
+        storage.addGlass("Bierglas");
+        storage.addIngredient("Banaan");
+        storage.addAddon("Ijsklontjes");
+        cocktailOrder.addAddon("Ijsklontjes");
+        ingredients.add("Banaan");
+        order.addCocktailOrder(cocktailOrder, 3);
+        orders.add(order);
+
+        var result = bar.order(orders);
+
+        assertEquals(1, result.size());
+
+        for (var entry : result.entrySet())
+        {
+            var cocktail = entry.getKey();
+            assertEquals(3, entry.getValue());
+            assertEquals("Bierglas", cocktail.getGlass());
+            assertEquals("MenuCocktail", cocktail.getName());
+            assertTrue(cocktail.getAddons().contains("Ijsklontjes"));
+            assertTrue(cocktail.getIngredients().contains("Banaan"));
+        }
+    }
+
+    @Test
+    public void canOrderTwoDifferentCocktails() throws OutOfStock, MenuItemNotFound
+    {
+        var storage = new Storage();
+        var ingredients = new ArrayList<String>();
+        var bar = getBar(storage, ingredients);
+        var customer = new Customer("Jaap");
+        var orders = new HashSet<Order>();
+        var order = new Order(customer);
+        var cocktailOrder1 = new CocktailOrder("Bierglas", "MenuCocktail");
+        var cocktailOrder2 = new CocktailOrder("Bierglas", "MenuItem3");
+
+        storage.addGlass("Bierglas");
+        storage.addGlass("Bierglas");
+        storage.addIngredient("Banaan");
+        storage.addAddon("Ijsklontjes");
+        storage.addAddon("Ijsklontjes");
+        cocktailOrder1.addAddon("Ijsklontjes");
+        cocktailOrder2.addAddon("Ijsklontjes");
+        ingredients.add("Banaan");
+        order.addCocktailOrder(cocktailOrder1, 2);
+        order.addCocktailOrder(cocktailOrder2, 1);
+        orders.add(order);
+
+        var result = bar.order(orders);
+
+        assertEquals(2, result.size());
+
+        var cocktailsAmount = result.values();
+        assertTrue(cocktailsAmount.contains(2));
+        assertTrue(cocktailsAmount.contains(1));
+
+        var cocktails = result.keySet().toArray();
+        var cocktail1 = (Cocktail)cocktails[1];
+        var cocktail2 = (Cocktail)cocktails[0];
+
+        assertEquals("Bierglas", cocktail1.getGlass());
+        assertEquals("MenuCocktail", cocktail1.getName());
+        assertTrue(cocktail1.getAddons().contains("Ijsklontjes"));
+        assertTrue(cocktail1.getIngredients().contains("Banaan"));
+
+        assertEquals("Bierglas", cocktail2.getGlass());
+        assertEquals("MenuItem3", cocktail2.getName());
+        assertTrue(cocktail2.getAddons().contains("Ijsklontjes"));
     }
     
-    private Bar getBar()
+    private Bar getBar(Storage storage, ArrayList<String> ingredients)
     {
-        var bar = new Bar();
-        var menuCocktail = new MenuCocktail("MenuCocktail", 13.34);
+        var bar = new Bar(storage);
+        var menuCocktail = new MenuCocktail("MenuCocktail", 13.34, ingredients);
         var menuItem1 = new MenuItem("MenuItem1", 10.45);
         var menuItem2 = new MenuItem("MenuItem2", 1274.28);
         var menuItem3 = new MenuCocktail("MenuItem3", 45.99);
+
         bar.addMenuItem(menuCocktail);
         bar.addMenuItem(menuItem1);
         bar.addMenuItem(menuItem2);
         bar.addMenuItem(menuItem3);
+
         return bar;
     }
 }

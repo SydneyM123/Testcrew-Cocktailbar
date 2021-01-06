@@ -3,13 +3,14 @@ package com.Cocktailbar;
 /**
  * Represents an item on the menu
  *
- * @author 4753046
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
  * @version 0.1
  */
 public class MenuItem
 {
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
     public MenuItem(String name, double price)
     {

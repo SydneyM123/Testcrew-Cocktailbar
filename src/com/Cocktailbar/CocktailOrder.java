@@ -2,11 +2,18 @@ package com.Cocktailbar;
 
 import java.util.HashSet;
 
+/**
+ * Represents a cocktail order.
+ *
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
+ * @version 0.1
+ */
 public class CocktailOrder
 {
     private String glass;
     private String cocktail;
-    private HashSet<String> addons;
+    private final HashSet<String> addons;
 
     public CocktailOrder()
     {

@@ -2,6 +2,13 @@ package com.Cocktailbar;
 
 import java.util.HashSet;
 
+/**
+ * Represents a customer for the cocktailbar.
+ *
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
+ * @version 0.1
+ */
 public class Customer
 {
     private String name;

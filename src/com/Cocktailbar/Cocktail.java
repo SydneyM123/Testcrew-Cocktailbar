@@ -5,7 +5,8 @@ import java.util.HashSet;
 /**
  * Represents a cocktail.
  *
- * @author 4753046
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
  * @version 0.1
  */
 public class Cocktail
@@ -43,12 +44,12 @@ public class Cocktail
         this.glass = glass;
     }
 
-    private void AddIngredient(String ingredient)
+    public void addIngredient(String ingredient)
     {
         ingredients.add(ingredient);
     }
 
-    private void AddAddon(String addon)
+    public void addAddon(String addon)
     {
         addons.add(addon);
     }

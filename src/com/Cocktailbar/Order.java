@@ -2,6 +2,13 @@ package com.Cocktailbar;
 
 import java.util.HashMap;
 
+/**
+ * Represents a order that can be used to order cocktails.
+ *
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
+ * @version 0.1
+ */
 public class Order
 {
     public static int ORDER_ID = 0;
