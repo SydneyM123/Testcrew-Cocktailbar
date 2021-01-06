@@ -3,6 +3,13 @@ package com.Cocktailbar;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * Main application
+ *
+ * @author Sydney Minnaar
+ * @author Thomas Luchies
+ * @version 1.0
+ */
 public class Main
 {
     public static void main(String[] args) throws IOException

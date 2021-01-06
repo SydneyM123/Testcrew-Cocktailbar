@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 0.1
+ * @version 1.0
  */
 public class MenuCocktail extends MenuItem
 {
