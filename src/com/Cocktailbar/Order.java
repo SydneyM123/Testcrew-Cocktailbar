@@ -29,7 +29,15 @@ public class Order
 
     public void addCocktailOrder(CocktailOrder cocktailOrder, Integer amount)
     {
-        this.cocktailOrders.put(cocktailOrder, amount);
+        if(this.cocktailOrders.containsKey(cocktailOrder))
+        {
+            this.cocktailOrders.replace(cocktailOrder, amount + this.cocktailOrders.get(cocktailOrder));
+        }
+        else
+        {
+            this.cocktailOrders.put(cocktailOrder, amount);
+        }
+
     }
 
     public void removeCocktailOrder(CocktailOrder cocktailOrder)
