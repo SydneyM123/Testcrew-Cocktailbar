@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 1
+ * @version 1.0
  */
 public class Menu
 {

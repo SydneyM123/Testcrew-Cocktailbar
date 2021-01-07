@@ -5,7 +5,7 @@ package com.Cocktailbar;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 0.1
+ * @version 1.0
  */
 public class MenuItem
 {

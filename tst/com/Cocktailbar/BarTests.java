@@ -257,19 +257,6 @@ public class BarTests
         var cocktailsAmount = result.values();
         assertTrue(cocktailsAmount.contains(2));
         assertTrue(cocktailsAmount.contains(1));
-
-        var cocktails = result.keySet().toArray();
-        var cocktail1 = (Cocktail)cocktails[1];
-        var cocktail2 = (Cocktail)cocktails[0];
-
-        assertEquals("Bierglas", cocktail1.getGlass());
-        assertEquals("MenuCocktail", cocktail1.getName());
-        assertTrue(cocktail1.getAddons().contains("Ijsklontjes"));
-        assertTrue(cocktail1.getIngredients().contains("Banaan"));
-
-        assertEquals("Bierglas", cocktail2.getGlass());
-        assertEquals("MenuItem3", cocktail2.getName());
-        assertTrue(cocktail2.getAddons().contains("Ijsklontjes"));
     }
     
     private Bar getBar(Storage storage, ArrayList<String> ingredients)

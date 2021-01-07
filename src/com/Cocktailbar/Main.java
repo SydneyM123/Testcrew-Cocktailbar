@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * The main console application of the cocktail bar
+ * Main application
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 1
+ * @version 1.0
  */
 public class Main
 {
