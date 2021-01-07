@@ -9,7 +9,7 @@ import java.util.HashMap;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 0.1
+ * @version 1
  */
 public class Storage
 {

@@ -12,7 +12,7 @@ import java.util.HashSet;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 0.1
+ * @version 1
  */
 public class Bar
 {
@@ -40,6 +40,11 @@ public class Bar
     public Menu getMenu()
     {
         return menu;
+    }
+
+    public Storage getStorage()
+    {
+        return this.storage;
     }
 
     public void addMenuItem(MenuItem menuItem)

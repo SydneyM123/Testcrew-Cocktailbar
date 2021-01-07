@@ -7,7 +7,7 @@ import java.util.HashSet;
  *
  * @author Sydney Minnaar
  * @author Thomas Luchies
- * @version 0.1
+ * @version 1
  */
 public class CocktailOrder
 {
