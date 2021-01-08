@@ -1,10 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Testcrew-Cocktailbar:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="Testcrew-Cocktailbar.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/build/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="Testcrew-Cocktailbar" />
     </root>
   </artifact>
