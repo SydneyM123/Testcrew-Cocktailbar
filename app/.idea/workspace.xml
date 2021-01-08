@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Testcrew-Cocktailbar:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d34020b-07df-4bde-81bf-f6061caf3bfe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testcrew-Cocktailbar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Bar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Cocktail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/CocktailOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Exceptions/MenuItemNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Exceptions/OutOfStock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuAddon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuCocktail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuGlass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Storage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/BarTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/MenuTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/OrderTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/StorageTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1kyNrolO7qGMDf34fJXgQDUqk2X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.Cocktailbar" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in Testcrew-Cocktailbar">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Cocktailbar.Main" />
+      <module name="Testcrew-Cocktailbar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Testcrew-Cocktailbar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Testcrew-Cocktailbar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Testcrew-Cocktailbar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.Cocktailbar.BarTests]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarTests (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Testcrew-Cocktailbar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:com.Cocktailbar.BarTests]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarTests.canOrderTwoDifferentCocktails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Testcrew-Cocktailbar" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Cocktailbar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Cocktailbar" />
+      <option name="MAIN_CLASS_NAME" value="com.Cocktailbar.BarTests" />
+      <option name="METHOD_NAME" value="canOrderTwoDifferentCocktails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in Testcrew-Cocktailbar" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BarTests (2)" />
+        <item itemvalue="JUnit.BarTests.canOrderTwoDifferentCocktails" />
+        <item itemvalue="JUnit.BarTests (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d34020b-07df-4bde-81bf-f6061caf3bfe" name="Default Changelist" comment="" />
+      <created>1606669072932</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606669072932</updated>
+      <workItem from="1607773665483" duration="163000" />
+      <workItem from="1607773847951" duration="43000" />
+      <workItem from="1608730437766" duration="11275000" />
+      <workItem from="1608750454153" duration="11000" />
+      <workItem from="1609763212223" duration="386000" />
+      <workItem from="1609763624884" duration="850000" />
+      <workItem from="1609764492730" duration="3877000" />
+      <workItem from="1609768547456" duration="11981000" />
+      <workItem from="1609837251383" duration="6000" />
+      <workItem from="1609926585833" duration="4196000" />
+      <workItem from="1609943304959" duration="38000" />
+      <workItem from="1610093105200" duration="2113000" />
+      <workItem from="1610096343410" duration="1520000" />
+      <workItem from="1610098865812" duration="13000" />
+      <workItem from="1610099117995" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
