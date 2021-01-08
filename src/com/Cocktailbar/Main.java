@@ -41,10 +41,6 @@ public class Main
         storage.addGlass("Cocktail Glas");
         storage.addGlass("Cocktail Glas");
         storage.addGlass("Cocktail Glas");
-        storage.addGlass("Wijn Glas");
-        storage.addGlass("Wijn Glas");
-        storage.addGlass("Wijn Glas");
-        storage.addGlass("Wijn Glas");
         storage.addIngredient("Strawberry");
         storage.addIngredient("Strawberry");
         storage.addIngredient("Strawberry");
@@ -99,12 +95,6 @@ public class Main
         storage.addAddon("Rietje");
         storage.addAddon("Rietje");
         storage.addAddon("Rietje");
-        storage.addAddon("Paraplutje");
-        storage.addAddon("Paraplutje");
-        storage.addAddon("Paraplutje");
-        storage.addAddon("Paraplutje");
-        storage.addAddon("Paraplutje");
-        storage.addAddon("Paraplutje");
 
         Menu menu = new Menu();
         MenuCocktail sexOnTheBeach = new MenuCocktail("Sex on the beach", 4.99);
@@ -316,7 +306,7 @@ public class Main
                                             currentAddon++;
                                         }
                                     }
-                                    System.out.println(currentAddon + ": none");
+                                    System.out.println(currentAddon + ": Geen keuze");
                                     orderInput = new Scanner(System.in);
                                     addonChosen = orderInput.nextInt();
                                     if(addonChosen == currentAddon)
@@ -453,8 +443,7 @@ public class Main
                                 System.out.println(" Amount: " + cocktailLoop.getValue() + "\n");
                             }
                             System.out.println("\nThe total price of your order is " + bar.paymentAmount(order));
-                            pressAnyKeyToContinue();
-                            orderComplete = true;
+                            System.exit(0);
                         }
                         else
                         {
