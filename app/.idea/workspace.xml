@@ -25,30 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d34020b-07df-4bde-81bf-f6061caf3bfe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Testcrew-Cocktailbar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Bar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Cocktail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/CocktailOrder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Exceptions/MenuItemNotFound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Exceptions/OutOfStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuAddon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuCocktail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuGlass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/MenuItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/com/Cocktailbar/Storage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/BarTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/MenuTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/OrderTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tst/com/Cocktailbar/StorageTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +173,7 @@
       <workItem from="1610093105200" duration="2113000" />
       <workItem from="1610096343410" duration="1520000" />
       <workItem from="1610098865812" duration="13000" />
-      <workItem from="1610099117995" duration="24000" />
+      <workItem from="1610099117995" duration="1266000" />
     </task>
     <servers />
   </component>
