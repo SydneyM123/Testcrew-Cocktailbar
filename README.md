@@ -1,6 +1,6 @@
 Beste lezer,
 
-Je hebt zojuist de testopdracht cocktailbar gekregen.
+Je hebt zojuist de testopdracht cocktailbar gekregen. 🍸
 
 ### Inhoud
 
