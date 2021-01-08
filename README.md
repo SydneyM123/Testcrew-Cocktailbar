@@ -1,6 +1,6 @@
 Beste lezer,
 
-Je hebt zojuist de testopdracht cocktailbar gekregen. 🍸
+Je hebt zojuist de testopdracht cocktailbar gekregen.
 
 ### Inhoud
 
@@ -25,4 +25,4 @@ Het testdesign is gemaakt als handleiding voor het uitvoeren van de testen.
 In dit bestand staan 3 testen die op volgorden moeten worden uitgevoerd.
 
 
-### Wij wensen jullie veel succes met het testen.
+### Wij wensen jullie veel succes met het testen. 🍸
