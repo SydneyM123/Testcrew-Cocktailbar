@@ -5,10 +5,10 @@ Je hebt zojuist de testopdracht cocktailbar gekregen. 🍸
 ### Inhoud
 
 Deze testopdracht bevat het de volgende mappen:
-- Acceptatietestplan
-- Risicoanalyse
-- Testdesign
-- Userstories
+* Acceptatietestplan
+* Risicoanalyse
+* Testdesign
+* Userstories
 
 
 ### Acceptatie-testplan
